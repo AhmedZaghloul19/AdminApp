@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderFilterView" customModule="AdminApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Nq8-NQ-bhN"/>
+                <outletCollection property="filterButtons" destination="iz5-f2-c29" collectionClass="NSMutableArray" id="Cbe-xQ-EeK"/>
+                <outletCollection property="filterButtons" destination="OG9-tl-4zU" collectionClass="NSMutableArray" id="fZn-DY-6gs"/>
+                <outletCollection property="filterButtons" destination="VDk-pO-qE0" collectionClass="NSMutableArray" id="GRG-bN-dhK"/>
+                <outletCollection property="filterButtons" destination="wIE-vd-4j8" collectionClass="NSMutableArray" id="B0S-7S-nn5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-k1-qYp">
+                    <rect key="frame" x="8" y="8" width="321" height="54"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-cM-RaS">
+                            <rect key="frame" x="0.0" y="0.0" width="63" height="54"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-f2-c29" customClass="FilterButton" customModule="AdminApp" customModuleProvider="target">
+                            <rect key="frame" x="71" y="0.0" width="33" height="54"/>
+                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <state key="normal" title="All"/>
+                            <connections>
+                                <action selector="filterButtonTappedWithBtn:" destination="-1" eventType="touchUpInside" id="G8N-2q-03h"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OG9-tl-4zU" customClass="FilterButton" customModule="AdminApp" customModuleProvider="target">
+                            <rect key="frame" x="112" y="0.0" width="47" height="54"/>
+                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <state key="normal" title="Active"/>
+                            <connections>
+                                <action selector="filterButtonTappedWithBtn:" destination="-1" eventType="touchUpInside" id="wh2-SN-0gX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDk-pO-qE0" customClass="FilterButton" customModule="AdminApp" customModuleProvider="target">
+                            <rect key="frame" x="167" y="0.0" width="43" height="54"/>
+                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <state key="normal" title="Down"/>
+                            <connections>
+                                <action selector="filterButtonTappedWithBtn:" destination="-1" eventType="touchUpInside" id="S0i-sW-l6j"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIE-vd-4j8" customClass="FilterButton" customModule="AdminApp" customModuleProvider="target">
+                            <rect key="frame" x="218" y="0.0" width="103" height="54"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <state key="normal" title=" All Location" image="address">
+                                <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="filterButtonTappedWithBtn:" destination="-1" eventType="touchUpInside" id="cOx-jV-qXT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IyJ-k1-qYp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="BPo-cS-IbV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IyJ-k1-qYp" secondAttribute="bottom" constant="8" id="Ddf-Se-Rvs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IyJ-k1-qYp" secondAttribute="trailing" constant="8" id="Gu7-nf-2lc"/>
+                <constraint firstItem="IyJ-k1-qYp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="n9K-PZ-DBY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="32.799999999999997" y="-182.60869565217394"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="address" width="7.5" height="10.5"/>
+    </resources>
+</document>
